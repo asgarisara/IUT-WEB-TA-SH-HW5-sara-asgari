@@ -1,0 +1,30 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        title ورود
+        link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css', href='stylesheets/home.css')
+        script(type='text/javascript', src='javascripts/jquery-3.1.1.min.js')
+        script(type='text/javascript', src='javascripts/home.js')
+    body
+        .jumbotron
+            .container
+                form#register-form(action='/register', method='post', role='form')
+                    .form-group
+                        input#name.form-control(type='text', name='name', placeholder='firstname', value='', required)
+                    .form-group
+                        input#family.form-control(type='text', name='family', placeholder='lastname', value='', required)
+                    .form-group
+                        input#email.form-control(type='email', name='email', placeholder='Email Address', value='', required)
+                    .form-group
+                        input#password_reg.form-control(type='password', name='password', placeholder='Password', required)
+                    .form-group
+                        input#confirm-password.form-control(type='password', name='confirm', placeholder='Confirm Password', required)
+                    .form-group
+                        .row
+                            .col-sm-6.col-sm-offset-3
+                                input#register-submit.form-control.btn.btn-register(type='submit', name='register-submit', tabindex='4', value='Register Now')
+        #message
+            if message
+                h1.text-center.error-message #{message}

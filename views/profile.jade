@@ -1,0 +1,16 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        title ورود
+        link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css', href='stylesheets/home.css')
+        script(type='text/javascript', src='javascripts/jquery-3.1.1.min.js')
+        script(type='text/javascript', src='javascripts/home.js')
+    body
+    .container
+        p firstname #{user.name}
+        p lastname #{user.family}
+        p email #{user.email}
+        p password #{user.password}
+        a(href="/logout") logout
